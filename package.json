@@ -1,0 +1,23 @@
+{
+  "name": "npm_cloud",
+  "version": "1.0.0",
+  "description": "personal cloud xdxdx",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T3n0x/npm_cloud.git"
+  },
+  "author": "T3n0x",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T3n0x/npm_cloud/issues"
+  },
+  "homepage": "https://github.com/T3n0x/npm_cloud#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
