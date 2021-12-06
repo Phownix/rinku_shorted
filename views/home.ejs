@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="logo__title">
+            <span class="icon_nav">Cloud</span>
+            <div class="actual_page">
+                <p class="two_lines">
+                    <span class="name">Paulo Gutierrez </span>
+                    <span class="email">fenris.fake@mail.cl</span>
+                </p>
+            </div>
+        </div>
+    
+        <div class="menu_list">
+            <ul>
+                <li><a href="/">Subir</a></li>
+                <li><a href="/">Historial</a></li>
+                <li><a href="">Ajustes</a></li>
+                <hr>
+                <li><a href="">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="grid_items">
+            <% for(var i=0; i<data.length; i++) {%>
+                <div class="card_item">
+                    <span class="name_item"><%= data[i] %></span>
+                    <div class="type_item">
+                        <svg width="67" height="72" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <defs>
+                                <filter id="svg_4_blur">
+                                    <feGaussianBlur stdDeviation="0.1" in="SourceGraphic"/>
+                                </filter>
+                            </defs>
+                            <g>
+                                <title>Layer 1</title>
+                                <g id="svg_7">
+                                    <path stroke-width="0" filter="url(#svg_4_blur)" id="svg_1" fill="currentColor" d="m16.59256,56.37022l33.98139,0l0,-6.79628l-33.98139,0l0,6.79628z"/>
+                                    <path stroke-width="0" filter="url(#svg_4_blur)" id="svg_2" fill="currentColor" d="m50.57395,42.77767l-33.98139,0l0,-6.79628l33.98139,0l0,6.79628z"/>
+                                    <path stroke-width="0" filter="url(#svg_4_blur)" id="svg_3" fill="currentColor" d="m16.59256,29.18511l13.59256,0l0,-6.79628l-13.59256,0l0,6.79628z"/>
+                                    <path stroke-width="0" id="svg_4" fill="currentColor" d="m13.19442,2c-5.63021,0 -10.19442,4.56421 -10.19442,10.19442l0,47.57394c0,5.63038 4.56421,10.19442 10.19442,10.19442l40.77767,0c5.63038,0 10.19442,-4.56404 10.19442,-10.19442l0,-33.98139c0,-13.13717 -10.64977,-23.78697 -23.78697,-23.78697l-27.18511,0zm0,6.79628l23.78697,0l0,16.99069l20.38883,0l0,33.98139c0,1.87679 -1.52135,3.39814 -3.39814,3.39814l-40.77767,0c-1.87672,0 -3.39814,-1.52135 -3.39814,-3.39814l0,-47.57394c0,-1.87672 1.52141,-3.39814 3.39814,-3.39814zm30.58325,0.33988c5.47542,1.11146 9.99495,4.85608 12.17893,9.85453l-12.17893,0l0,-9.85453z" clip-rule="evenodd" fill-rule="evenodd"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="btn_group">
+                        <button>Leer</button>
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5V12.1578L16.2428 8.91501L17.657 10.3292L12.0001 15.9861L6.34326 10.3292L7.75748 8.91501L11 12.1575V5Z" fill="currentColor"/>
+                                <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.49997 12.8995C2.71892 13.6805 2.71892 14.9468 3.49997 15.7279L7.35785 19.5858H4.08576C3.53347 19.5858 3.08576 20.0335 3.08576 20.5858C3.08576 21.1381 3.53347 21.5858 4.08576 21.5858H20.0858C20.638 21.5858 21.0858 21.1381 21.0858 20.5858C21.0858 20.0335 20.638 19.5858 20.0858 19.5858H10.9558L20.4705 10.071C21.2516 9.28999 21.2516 8.02366 20.4705 7.24261L16.2279 2.99997C15.4468 2.21892 14.1805 2.21892 13.3995 2.99997L3.49997 12.8995ZM7.82579 11.4021L4.91418 14.3137L9.15683 18.5563L12.0684 15.6447L7.82579 11.4021ZM9.24 9.98787L13.4826 14.2305L19.0563 8.65683L14.8137 4.41418L9.24 9.98787Z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
