@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Descargando <i><%= data.name %></i></h3>
+    <a href="" id="link">Descargar ahora</a>
+
+    <script>
+        let data = JSON.parse('<%- JSON.stringify(data) %>');
+        var buffer = new ArrayBuffer(data.size-15);
+
+        let blob = new Blob([buffer, data.file], {type: `${data.type}`});
+        console.log(blob.size)
+        link.href = URL.createObjectURL(blob);
+
+        console.log(data)
+    </script>
+</body>
+</html>
