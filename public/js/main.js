@@ -10,9 +10,8 @@ const getBinary = () => {
     const reader = new FileReader();
     reader.onload = function(evt) { 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", '/home');
+        xhr.open("POST", '/upload');
 
-        xhr.setRequestHeader("Accept", "application/json");
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function () {
@@ -20,12 +19,14 @@ const getBinary = () => {
             console.log(xhr.status);
             console.log(data);
         }};
-        const data = `{"name": "${f.name}", "type": "${f.type}", "size": "${f.size}", "binary": "${evt.target.result}"}`;
-        
-        console.log(data)
+        const data = `{"name": "${f.name}", "type": "${f.type}", "size": "${f.size}", "file": "${evt.target.result}"}`;
+
         xhr.send(data);
     };
     reader.readAsDataURL(f)
+    setTimeout(()=>{
+        window.location.reload(true)
+    },400)
 }
 
 const binary = (e) => {

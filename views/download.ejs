@@ -12,9 +12,8 @@
 
     <script>
         let data = JSON.parse('<%- JSON.stringify(data) %>');
-        var buffer = new ArrayBuffer(data.size-15);
 
-        let blob = new Blob([buffer, data.file], {type: `${data.type}`});
+        let blob = new Blob([data.file], {type: `${data.type}`});
         console.log(blob.size)
         link.href = URL.createObjectURL(blob);
 
@@ -22,3 +21,5 @@
     </script>
 </body>
 </html>
+
+
