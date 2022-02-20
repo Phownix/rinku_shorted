@@ -4,6 +4,7 @@
   "description": "personal cloud xdxdx",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,10 +19,7 @@
   "homepage": "https://github.com/T3n0x/npm_cloud#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
-    "uuid": "^8.3.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

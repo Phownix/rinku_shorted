@@ -4,17 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Document</title>
+    <title>Rinku</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-    <center>
-        <h1>Hola Mundo [Index]</h1>
-        <p>Ingresa al home <a href="/home">Aqui</a></p>
-    </center>
+    <header>
+        <nav>
+            <div class="logo__title">
+                <span class="icon_nav">Rinku</span>
+            </div>
+        
+            <div class="menu_list">
+                <ul>
+                    <li><a href="#upload" id="upload_file_btn">Home</a></li>
+                    <li><a href="/">Pages</a></li>
+                    <li><a href="">How It Works</a></li>
+                    <hr>
+                    <li><a href="">Create Account</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="upload_form">
+            <h1>Paste the URL to be shortened</h1>
+            <form action="/upload">
+                <input type="url" placeholder="https://www.example.com" required>
+                <button>Short</button>
+            </form>
+            <!-- <span>Rinku.Me is a free tool to shorten a URL or reduce a link <br> Use our URL Shortener to create a shortened link making it easy to remember</span> -->
+        </div>
+
+        <div class="shape"></div>
+    </header>
+
+    <main>
+        <div class="data__info">
+            <article>
+                <h3>What's is Rinku.me?</h3>
+                <span>
+                    <i>Rinku.Me</i> is a free tool to shorten a URL or reduce a link
+                    Use our URL Shortener to create a shortened link making it easy to remember
+                </span>
+            </article>
+            <!-- <article>
+                <h3>Create a free account to enjoy:</h3>
+                <span>
+                    <li>
+                        Easy Link Shortening
+                    </li>
+                    <li>
+                        Full Link History
+                    </li>
+                    <li>
+                        Customized TinyURLs
+                    </li>
+                </span>
+            </article> -->
+            <article>
+                <h3>How It Works</h3>
+                <span>
+                    A link shortener is a tool that transforms your long links into shorter ones. Our <i>Rinku URL Shorted™</i> tool can drastically shorten your long links and still reliably direct to the same web pages. To use our link shortener, the user only has to copy and paste their long link into our tool and we condense it into a more shareable link. 
+                </span>
+            </article>
+            <article>
+                <h3>Pages</h3>
+                <span>
+                    <i>Rinku.Me</i> is a free tool to shorten a URL or reduce a link
+                    Use our URL Shortener to create a shortened link making it easy to remember
+                </span>
+            </article>
+        </div>
+        <div class="upload_user">
+            <div class="grid_items"></div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
