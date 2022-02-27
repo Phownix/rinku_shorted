@@ -17,7 +17,6 @@ body{
 
 header{
     position: relative;
-    padding: .5rem 1.5rem;
     color: #ffffff;
     .shape{
         position: absolute;
@@ -28,7 +27,7 @@ header{
         transform: rotate(-1.3deg);
         width: 120%;
         background: rgb(65,101,86);
-        background: linear-gradient(15deg, rgba(65,101,86,1) 0%, rgba(64,134,105,1) 50%, rgba(69,175,131,1) 100%); 
+        background: linear-gradient(15deg, #416556 0%, #408669 50%, #45af83 100%); 
     }
 
     nav{
@@ -36,6 +35,7 @@ header{
         align-items: center;
         justify-content: space-between;
         margin-bottom: 2rem;
+        padding: .5rem 1.5rem;
         .logo__title{
             display: flex;
             align-items: center;
@@ -61,17 +61,30 @@ header{
                     align-items: center;
                     justify-content: center;
                     list-style: none;
-                    padding: .2rem .4rem;
-    
+                    transition: all .1s ease-in-out;
+                    
+                    opacity: .6;
                     a{
+                        display: block;
                         color: #fff !important;
                         font-size: 1.2em;
+                        padding: .3rem .5rem;
                         text-decoration: none;
-                        transition: all .1s ease-in-out;
-                        opacity: .6;
-                        &:hover{
-                            opacity: 1;
+                        
+                    }
+
+                    &:last-child{
+                        background-color: #408669;
+                        border-radius: .3rem;
+                        opacity: .7;
+                        a{
+                            font-weight: 600;
+                            padding: .4rem .8rem;
                         }
+                        margin-left: .2rem;
+                    }
+                    &:hover{
+                        opacity: 1;
                     }
                 }
             }
@@ -80,7 +93,7 @@ header{
 
     .upload_form{
         max-width: 650px;
-        margin: auto;
+        margin: 0 auto;
 
         form{
             display: grid;
@@ -107,13 +120,85 @@ header{
                 cursor: pointer;
             }
         }
+
+        .url__app{
+            background-color: #ececec09;
+            border-radius: .3rem;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            .url_to_shorted{
+                position: relative;
+                display: block;
+                border: 3px dashed #d8d8d885;
+                border-radius: .3rem;
+                padding: 1rem;
+                font-size: 1.2em;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 500;
+
+                .origin{
+                    font-weight: 600;
+                }.pathname{
+                    color: #f3f3f3;
+                    text-decoration: none;
+                    position: relative;
+                    font-weight: 300;
+                }
+
+                &:hover{
+                    .pathname{
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            background: #416556;
+                            height: 2px;
+                            left: .2rem;
+                            right: .1rem;
+                            bottom: -.2rem;
+                        }
+                    }
+                }
+
+                button, .danger{
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    height: 2em;
+                    margin: auto;
+                }button{
+                    right: .5rem;
+                    font-weight: 600;
+                    font-size: .7em;
+                    border-radius: .3rem;
+                    padding: .2rem .6rem .3rem .6rem;
+                    background-color: #41655650;
+                    color: #c9c9c9;
+                    &:hover{
+                        background-color: #41655670;
+                    }
+                    &:active{
+                        background-color: #41655690;
+                    }
+                }.danger{
+                    left: .5rem;
+                    // background-color: #408669;
+                    height: 28px;
+                    cursor: help;
+                    svg{
+                        margin: 4px;
+                        color: #DD6449;
+                    }
+                }
+            }
+        }
     }
 }
 
 
 
 main{
-    margin-top: 5rem;
+    margin-top: 7rem;
 
     .data__info{
         max-width: 600px;
@@ -129,20 +214,6 @@ main{
                 letter-spacing: .5px;
             }
         }
-    }
-
-    .upload_user{
-        max-width: 1150px;
-        margin: 1rem auto;
-    
-        .grid_items{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            align-items: flex-start;
-            grid-gap: .6rem .7rem;
-            padding: .5rem 1rem;
-        }
-        
     }
 }
 
@@ -186,7 +257,7 @@ a{
 
 hr{
     display: inline-block;
-    border-left: 2px solid #498b6f;
+    border-left: 2px solid #ffffff1e;
     height: 30px;
     margin: 0 .5rem;
 }
