@@ -1,2 +1,2 @@
-# npm_cloud
-Cloud test page
+# Rinku Shorted URL
+Create config/connection.js and configure you SQL Server connection
