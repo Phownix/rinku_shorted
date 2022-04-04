@@ -1,8 +1,9 @@
 const db = require('../db')
 
-const short_url = async (path, url, user=null) => {
-    db.run('INSERT INTO path (`pathname`, `location`, `user_id`) VALUES (?, ?, ?)', [path, url, user], (err) => {
-        if (err) { return err; }
+const short_url = async (path, url, user=null, date, date_to) => {
+    db.run('INSERT INTO path (`pathname`, `location`, `user_id`, `create_at`, `limit_to`) VALUES (?, ?, ?, ?, ?)', [path, url, user, date, date_to], (err) => {
+        if (err) { console.log(err); }
+        console.log({path: path, url:url, user:user, date:date, date_to:date_to})
     })
 }
 

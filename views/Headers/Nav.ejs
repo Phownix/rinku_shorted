@@ -6,11 +6,11 @@
     
         <div class="menu_list">
             <ul>
-                <li><a href="#upload" id="upload_file_btn">Home</a></li>
-                <li><a href="/">Pages</a></li>
-                <li><a href="">How It Works</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#pages">Pages</a></li>
+                <li><a href="/#how_it_works">How It Works</a></li>
                 <!-- <hr> -->
-                <li><a href="">Create Account</a></li>
+                <li><a href="javascript:void(0)" class="disable">Create Account</a></li>
             </ul>
         </div>
     </nav>
@@ -20,6 +20,50 @@
         <form action="/">
             <input type="url" name="u" placeholder="https://www.example.com" value="<%= input %> " required>
             <button>Short</button>
+
+            <% if (url == null) { %>
+                <div class="advance_stg">
+                    <input type="checkbox" name="advance" id="advance_button">
+    
+                    <div class="content">
+                        <div class="availability">
+                            <h5 title="Days Availability">Availability</h5>
+                            <div class="box">
+                                <input type="radio" name="d" id="5days" value="5" checked>
+                                <label for="5days">5+</label>
+                                <input type="radio" name="d" id="10days" value="10">
+                                <label for="10days">10+</label>
+                                <input type="radio" name="d" id="15days" value="15">
+                                <label for="15days">15+</label>
+                                <input type="radio" name="d" id="30days" value="30">
+                                <label for="30days">30+</label>
+                            </div>
+                        </div>  
+    
+                        <div class="url_name">
+                            <h5 title="Limit 15 characters">URL Name</h5>
+                            <div class="box">
+                                <input type="text" name="n" id="url_name" value="<%= path %>">
+                            </div>
+                        </div>
+                    </div>  
+
+                    <label class="adnc_btn" for="advance_button">
+                        Advance
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                            <path d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z" fill="currentColor" />
+                        </svg>
+                    </label>
+                </div>
+
+                
+                <script>
+                    if ( window.history.replaceState ) {
+                        window.history.replaceState( null, null, window.location.href );
+                    }
+                </script>
+                
+            <% } %>
         </form>
         <!-- <span>Rinku.Me is a free tool to shorten a URL or reduce a link <br> Use our URL Shortener to create a shortened link making it easy to remember</span> -->
 
