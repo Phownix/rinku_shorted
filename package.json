@@ -3,31 +3,33 @@
   "version": "1.0.0",
   "description": "personal cloud xdxdx",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "node index.js",
+    "dev": "npx nodemon --ext js,html index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/T3n0x/npm_cloud.git"
+    "url": "git+https://github.com/Phownix/npm_cloud.git"
   },
-  "author": "T3n0x",
+  "author": "Phownix",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/T3n0x/npm_cloud/issues"
+    "url": "https://github.com/Phownix/npm_cloud/issues"
   },
-  "homepage": "https://github.com/T3n0x/npm_cloud#readme",
+  "homepage": "https://github.com/Phownix/npm_cloud#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "date-format": "^4.0.6",
     "dotenv": "^16.0.0",
-    "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "sqlite3": "^5.0.2"
+    "mongoose": "^7.5.3",
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
+    {% if url %}
+        <style>
+            .shape{top: -35% !important;}
+        </style>
+    {% endif %}
+</head>
+<body>
+    {% include "./Headers/Nav.html" %}
+
+    <main>
+        <div class="data__info">
+            <article>
+                <h2>What's is Rinku.me?</h2>
+                <p>
+                    <i>Rinku URL Shorted™</i> is a user-friendly URL shortening tool designed to make sharing links a breeze. Whether you have long, complex URLs or just want to simplify a web address, Rinku.me has you covered. Our platform offers more than just basic shortening; it provides advanced features for personalized URL management.
+                </p>
+            </article>
+            <!-- <article>
+                <h2>Create a free account to enjoy:</h2>
+                <span>
+                    <li>
+                        Easy Link Shortening
+                    </li>
+                    <li>
+                        Full Link History
+                    </li>
+                    <li>
+                        Customized TinyURLs
+                    </li>
+                </span>
+            </article> -->
+            <article id="how_it_works">
+                <h2>How It Works</h2>
+                <p>Rinku.me streamlines the process of shortening URLs. Just follow these simple steps:</p>
+                
+                <ul>
+                    <li>Paste Your URL: Copy and paste your long URL into the provided field.</li>
+                    <li>Customize (Optional): Tailor your shortened link by specifying a custom name and expiration time. If left blank, default settings apply.</li>
+                    <li>Generate Short Link: Click the "Shorten URL" button to generate your personalized, shortened link.</li>
+                </ul>
+
+                <p>It's that easy! Your shortened link is ready to use.</p>
+            </article>
+            <article id="pages">
+                <h2>Pages</h2>
+                <p>Explore the features of <i>Rinku.Me</i>:</p>
+
+                <ul>
+                    <li>URL Shortening: Effortlessly shorten your links for easy sharing and tracking.</li>
+                    <li>Advanced Options: Customize link names and expiration times for tailored, time-limited access.</li>
+                    <li>User Dashboard (Coming Soon): Registered users will have access to a personalized dashboard to manage and track their shortened URLs, along with detailed statistics.</li>
+                </ul>
+
+                <p>Stay tuned for even more features to enhance your URL shortening experience!</p>
+            </article>
+        </div>
+        <div class="upload_user">
+            <div class="grid_items"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Development by <a href="https://phownix.vercel.app/">Phownix</a> 2023</p>
+    </footer>
+
+    <script>
+        async function copy (ele) {
+            await navigator.clipboard.writeText(ele);
+            console.log(ele)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<header>
+    <nav>
+        <h1 class="logo__title">
+            <a href="/" class="icon_nav">Rinku</a>
+        </h1>
+    
+        <div class="menu_list">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#pages">Pages</a></li>
+                <li><a href="/#how_it_works">How It Works</a></li>
+                <li><a href="/account/login">Create Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="upload_form">
+        <h2>Paste the URL to be shortened</h2>
+        <span>Use our URL Shortener to create a shortened link making it easy to remember</span>
+
+        <form action="/shortener" method="post">
+            <input type="hidden" name="limit_to" value="5">
+            <input type="hidden" name="pathname" value="{{ path if path}}">
+            <input type="url" name="location" placeholder="https://www.example.com" value="{{ input if input }}" required />
+            <button>Short</button>
+        </form>
+
+        {% if url != null %}
+            <div class="url__app">
+                <article class="url_shorted">
+                    <div class="url_to_shorted">
+                        {% if url.protocol != 'https:' %}
+                            <span class="danger" title="Se detecto que el sitio web al que se rederigira es inseguro">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </span>
+                        {% endif %}
+                        <span class="origin">{{ url.origin }}</span>/<a href="{{ url.new_link }}" target="_blank" class="pathname">{{ url.path }}</a>
+                        <button onclick="copy('{{url.new_link}}')">Copy Link</button>
+                    </div>
+                </article>
+            </div>
+        {% else %}
+            <script>
+                if ( window.history.replaceState ) {
+                    window.history.replaceState( null, null, window.location.href );
+                }
+            </script> 
+        {% endif %}
+    </div>
+    <div class="shape"></div>
+</header>
