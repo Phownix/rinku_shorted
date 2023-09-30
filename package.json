@@ -1,26 +1,27 @@
 {
   "name": "rinku_express",
   "version": "1.0.0",
-  "description": "personal cloud xdxdx",
+  "description": "Rinku URL Shorted™ is a user-friendly URL shortening tool designed to make sharing links a breeze. Whether you have long, complex URLs or just want to simplify a web address, Rinku.me has you covered.",
   "main": "index.js",
   "type": "module",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
+    "start": "npx nodemon index.js",
     "dev": "npx nodemon --ext js,html index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Phownix/npm_cloud.git"
+    "url": "git+https://github.com/Phownix/rinku_shorted.git"
   },
   "author": "Phownix",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Phownix/npm_cloud/issues"
+    "url": "https://github.com/Phownix/rinku_shorted/issues"
   },
-  "homepage": "https://github.com/Phownix/npm_cloud#readme",
+  "homepage": "https://github.com/Phownix/rinku_shorted#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
     "date-format": "^4.0.6",

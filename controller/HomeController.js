@@ -1,5 +1,6 @@
-import { newShort } from "../model/short_model.js";
+import { shortModel } from "../model/short_model.js";
 import { RandomURL } from "./../utils/random_url.js"
+
 export class HomeController {
     static async index (req, res, next) {
         try{
@@ -34,11 +35,24 @@ export class HomeController {
             body.user_id = null;
             body.create_at = date_at;
             body.limit_to = date_to;
+
             if (!body.pathname){
                 body.pathname = RandomURL()
             }
+
+            await shortModel.appendShort({body});
             
             res.redirect("/?path="+body.pathname+"&location="+body.location);
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    static async index_id (req, res, next){
+        try {
+            let {url} = req.params;
+            const short = await shortModel.findById(url)
+            res.redirect(short.location)
         } catch (err) {
             next(err);
         }

@@ -1,20 +1,23 @@
 import short from "../schema/short.js";
+import mongoose from "mongoose";
+import 'dotenv/config'
 
-Date.prototype.addDays = function (days) {
-    let date = new Date(this.valueOf());
-    date.setDate(date.getDate() + days);
-    return date;
-}
+mongoose.connect(process.env.MONGO_SERVER)
+  .then(() => console.log('Connected!'));
 
-export const getById = async ({ id }) => {
-    let response = await short.findOne({id}).exec();
 
-    return response;
-}
+export class shortModel {
+    static async findById (id) {
+        let response = await short.findOne({"pathname": id}).exec();
+        console.log(id)
 
-export const newShort = async ({ body }) => {
-    let _sh = new newShort(body);
-    let response = await _sh.save();
+        return response;
+    }
 
-    return response;
+    static async appendShort ({ body }) {
+        let _sh = new short(body);
+        let response = await _sh.save();
+
+        return response;
+    }
 }

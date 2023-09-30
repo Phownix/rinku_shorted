@@ -5,4 +5,4 @@ export const Home = Router ();
 
 Home.get('/', HomeController.index);
 Home.post("/shortener", HomeController.shortener);
-Home.get('/:url', HomeController.index);
+Home.get('/:url', HomeController.index_id);
